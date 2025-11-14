@@ -60,7 +60,7 @@ Eles são importantes, claro, mas não são parte do coração do fluxo. São ma
 - **Baixa**: garante que ninguém faça besteira, mas não impede a compra caso aconteça.
 
 No fim, a prioridade foi definida pelo mesmo critério que qualquer pessoa sensata usaria:  
-**o que afeta diretamente o dinheiro vem primeiro**.
+**"priorize sempre o fluxo de compra e a experiência do cliente"**.
 
 ---
 
