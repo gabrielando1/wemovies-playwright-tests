@@ -1,153 +1,70 @@
-## Testes Automatizados E2E - WeMovies
-Autor: Gabriel Ando Takenaka 
-Desafio técnico – Automação E2E com Playwright & TypeScript
+# Desafio QA – WeMovies
 
-Este conjunto de testes automatizados utiliza Playwright para validar funcionalidades essenciais do fluxo de compras.
-Cada automação cobre um cenário independente, garantindo que a experiência do usuário no carrinho e no processo de finalização esteja funcionando corretamente.
+Este repositório contém as entregas do desafio técnico para a vaga de QA, envolvendo documentação de cenários de teste e implementação de testes automatizados E2E utilizando Playwright e TypeScript.
 
-Os testes fazem uso de funções auxiliares (helpers) para manter o código organizado, reutilizável e mais fácil de manter.
+## 🎯 Objetivo do Desafio
 
-## Estrutura dos testes
+O projeto WeMovies é um e-commerce simplificado composto por três telas:
 
-1. ## S003 – Adicionar itens e validar exibição
+- **Home**: listagem de filmes  
+- **Carrinho**: visualização e edição dos itens adicionados  
+- **Compra Realizada**: confirmação do pedido  
 
-## Objetivo:
-Verificar se a adição de produtos ao carrinho funciona corretamente e se a interface é atualizada da forma esperada.
+As entregas solicitadas são:
 
-## Principais validações:
+1. Documentar 10 cenários de teste prioritários  
+2. Implementar 3 testes E2E utilizando Playwright  
 
-Seleção de 3 produtos aleatórios.
+**🔗 Links**
 
-Adição de quantidades diferentes (1, 2 e 3 unidades).
+[Protótipo no Figma](https://www.figma.com/file/0ZyTELvPCSCnib16XG49YP/Teste-Front-React-WeFit---2022?node-id=0%3A1)
+[Aplicação WeMovies](http://wemovies-qa.s3-website.us-east-2.amazonaws.com/)
 
-Verificação da alteração visual do botão (cor e quantidade).
+---
 
-Abertura do carrinho e validação dos itens exibidos.
+## 📄 1. Documentação de Cenários de Teste
 
-Conferência de nome, preço e quantidade de cada item.
+Foram definidos 10 cenários prioritários, considerando comportamento crítico, fluxo principal de compra e interações essenciais.
 
-## Helpers usados:
+A documentação inclui:
 
-gerarTresUnicos
+- Cenário  
+- Pré-condições  
+- Passos detalhados  
+- Critérios de aceitação  
 
-getProductData
+Caso queria conferir como foram definidas as prioridades ou o mapeamento completo, mas se você prefere ser mais objetivo, confira os 10 cenários prioritários abaixo:
 
-getCartBasicInfo
+📁 [**Arquivo dos 10 cenários prioritários**](/documentacao/10casos.md)
 
-2. ## S008 – Remoção manual e esvaziamento completo
+❓ [**Justificativa dos Cenários Prioritários**](/documentacao/why10.md)
 
-## Objetivo:
-Garantir que o usuário consegue remover itens manualmente ou diminuir quantidades até que o produto seja removido do carrinho.
+🗂️ [**Mapeamento completo**](/documentacao/cenarios-de-teste-weMovies.xlsx)
 
-## Principais validações:
 
-Seleção de 3 produtos aleatórios.
+---
 
-Adição de quantidades diferentes (2, 3 e 4 unidades).
+## 🖥️ 2. Testes Automatizados E2E
 
-Ações de diminuir quantidade com atualização do carrinho.
+Os testes foram implementados em **TypeScript** utilizando **Playwright**, seguindo boas práticas de organização e leitura.
 
-Remoção manual ao zerar a quantidade.
+### Cenários automatizados
 
-Remoção automática usando o botão de lixeira.
+1. S003 - Adicionar itens ao carrinho pela Home  
+2. S008 - Alterar quantidade e remover itens no Carrinho  
+3. S009 - Finalizar compra e validar tela de Pedido Confirmado  
 
-Validação de nomes, quantidades e valores após cada ação.
+Para entender o funcionamento da automação entre no link abaixo: 
 
-## Helpers usados:
+🤖[**Testes Automatizados E2E – WeMovies**](/documentacao/testeE2E.md)
 
-gerarTresUnicos
+---
 
-getProductData
 
-getCartBasicInfo
+## ⭐ Bônus: Relatório do Processo, Gestão de Tempo e Conclusão do Desafio
 
-clickMinus
+Esta seção descreve o processo seguido durante o desenvolvimento do desafio técnico, incluindo organização, decisões tomadas, tempo investido e considerações finais sobre a entrega.
+ 
+[**📌 Planejamento Inicial**](/documentacao/relatorio.md) 
 
-clickPlus
 
-clickTrash
-
-3. ## S009 – Finalizar fluxo de compra
-
-## Objetivo:
-Simular um fluxo completo de compra, garantindo que todos os cálculos e etapas até a finalização funcionem corretamente.
-
-## Principais validações:
-
-Seleção de produtos e quantidades totalmente aleatórias.
-
-Cálculo próprio de subtotais e total final.
-
-Comparação com os valores exibidos na interface.
-
-Finalização do pedido.
-
-Verificação da tela de compra concluída.
-
-Teste do botão “Voltar” para retornar ao início.
-
-## Helpers usados:
-
-gerarEscolhaDeterminada
-
-gerarEscolhaRandom
-
-getProductData
-
-getCartInfo
-
-## Helpers
-
-## Os helpers ficam na pasta /helpers/ e foram criados para:
-
-evitar repetição de lógica
-
-deixar o teste mais legível
-
-facilitar manutenção futura
-
-## Arquivos utilizados:
-
-cartAddHelpers.ts
-
-cartHelpers.ts
-
-cartFlowHelpers.ts
-
-## Pré-requisitos
-
-Node.js instalado
-
-Playwright instalado
-
-Projeto configurado com TypeScript
-
-## Para instalar o Playwright:
-
-npx playwright install
-
-## Como executar os testes
-
-## Executar todos os testes:
-
-npm run test:e2e
-npx playwright test
-
-
-## Executar apenas um dos cenários:
-
-npx playwright test S003
-npx playwright test S008
-npx playwright test S009
-
-## Debug  
-
-npx playwright test --debug
-
-## Corrigindo possíveis erros no Windows
-
-## Caso o PowerShell bloqueie scripts ou comandos relacionados ao Playwright, execute:
-
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-
-Esse comando libera permissões temporárias apenas para o processo atual, evitando problemas sem alterar configurações permanentes do sistema.
