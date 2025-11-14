@@ -18,6 +18,8 @@ As entregas solicitadas são:
 **🔗 Links**
 
 [Protótipo no Figma](https://www.figma.com/file/0ZyTELvPCSCnib16XG49YP/Teste-Front-React-WeFit---2022?node-id=0%3A1)
+
+
 [Aplicação WeMovies](http://wemovies-qa.s3-website.us-east-2.amazonaws.com/)
 
 ---
