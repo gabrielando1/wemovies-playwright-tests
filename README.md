@@ -41,7 +41,7 @@ Caso queria conferir como foram definidas as prioridades ou o mapeamento complet
 
 ❓ [**Justificativa dos Cenários Prioritários**](/documentacao/why10.md)
 
-🗂️ [**Mapeamento completo**](/documentacao/cenarios-de-teste-weMovies.xlsx)
+🗂️ [**Mapeamento completo**](/documentacao/allcasos.md)
 
 
 ---

@@ -86,4 +86,6 @@ Confere se a interface não vira um caos ao abrir em celular.
 ### S019 – Prevenção de valores inválidos 🟡
 Evita quantidades negativas, insanidades numéricas e tentativas de hacker-de-garrancho.
 
+[🔥⚠️🟡 Entenda sobre os Ícones de Criticidade](/documentacao/whyall.md)
+
 [🏠Volte ao inicio](/README.md)
